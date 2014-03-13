@@ -1,0 +1,38 @@
+{
+  "name": "focus@will Keyboard Support",
+  "version": "0.0.1",
+  "description": "Start/stops focus@will using the F2 key on your computer",
+  "homepage_url": "http://github.com/h0ke",
+  "background": "html/background.html",
+  "permissions": [
+    "tabs"
+  ],
+  "background": {
+    "scripts": ["js/background.js"],
+    "persistent": false
+  },
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.focusatwill.com/*"
+      ],
+      "js": ["js/jquery.js", "js/content_focusatwill.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["js/jquery.js", "js/content_other.js"],
+      "run_at": "document_end"
+    }
+  ],
+    "icons": {
+    "16": "images/icons/icon16.png",
+    "48": "images/icons/icon48.png",
+    "128": "images/icons/icon128.png"
+    }
+}
+
