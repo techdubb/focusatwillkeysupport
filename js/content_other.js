@@ -4,15 +4,24 @@ var log = console.log.bind(console);
 
 log('focus@will keys: keyboard listener loading');
 
-var F2 = 113;
+chrome.runtime.sendMessage({method: "getFunctionKey"}, function(response) {
+  var function_key = response.functionKeyCode;
 
-$("body").bind("keydown",function(event){
-  console.log(event)
-  if ( event.keyCode === F2) {
-    log('F5 pressed');
-    chrome.runtime.sendMessage({'action':'playtoggle'}, function(response) {
-      log('Event page has responded.');
-      log(response);
-    });
-  }
-})
+  // the user has yet to select from the option menu
+  if (!function_key) function_key = "113";
+
+  log('Function key loaded from localStorage: ' + function_key);
+
+  $("body").bind("keydown", { key_code: function_key }, function(event){
+    if ( event.keyCode.toString() === event.data.key_code) {
+      log('Function key pressed');
+      chrome.runtime.sendMessage({'action':'playtoggle'}, function(response) {
+        log('Event page has responded.');
+        log(response);
+      });
+    }
+  });
+});
+
+
+

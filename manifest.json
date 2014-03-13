@@ -4,6 +4,7 @@
   "description": "Start/stops focus@will using the F2 key on your computer",
   "homepage_url": "http://github.com/h0ke",
   "background": "html/background.html",
+  "options_page": "options.html",
   "permissions": [
     "tabs"
   ],
