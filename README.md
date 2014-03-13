@@ -1,10 +1,10 @@
 # focus@will Keyboard Support
 
-### Start/stop focus@will using the function key selected (defaults F2) on your computer.
+### Start/stop focus@will using the function key selected (defaults F2).
 
 ### Install Instructions
 
- - Download the [focus@will zip file](https://github.com/h0ke/focusatwillkeysupport/archive/master.zip) and extract it.
+ - Download the [focus@will Keyboard Support zip file](https://github.com/h0ke/focusatwillkeysupport/archive/master.zip) and extract it.
  - Visit [chrome://extensions/](chrome://extensions/)
  - Click 'Load Unpacked Extension'
      - If you don't see this button, check 'Developer mode'

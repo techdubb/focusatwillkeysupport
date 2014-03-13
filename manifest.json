@@ -1,7 +1,7 @@
 {
   "name": "focus@will Keyboard Support",
   "version": "0.0.1",
-  "description": "Start/stops focus@will using the F2 key on your computer",
+  "description": "Start/stops focus@will using a selected function key",
   "homepage_url": "http://github.com/h0ke",
   "background": "html/background.html",
   "options_page": "options.html",
