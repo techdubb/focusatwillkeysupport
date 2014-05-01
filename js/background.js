@@ -1,7 +1,7 @@
-// Event page (formerly known as background script)
-// Get F5 presses from other tabs, send them to asoftmurmur tab
+// Get function key presses from other tabs, send them to focus@will tab
 
-var log = console.log.bind(console);
+// var log = console.log.bind(console);
+var log = function () { return; }
 
 log('focus@will keyboard: Background app running');
 

@@ -1,6 +1,7 @@
 // Sit around and wait for people to press F2, so we can tell the background script.
 
-var log = console.log.bind(console);
+// var log = console.log.bind(console);
+var log = function () { return; }
 
 log('focus@will keys: keyboard listener loading');
 
